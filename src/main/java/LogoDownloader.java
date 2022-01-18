@@ -13,8 +13,8 @@ public class LogoDownloader {
 
     private final FileLinesReader fileLinesReader = new DefaultFileLinesReader();
     private final String PATH_TEMPLATE = "PATH TEMPLATE FOR FORMATTING";
-    private final String URL_TEMPLATE = "URL TEMPLATE FOR FORMATTING";
-    private final List<String> companies = fileLinesReader.readAllLines("PATH TO TEXT FILE WITH COMPANIES LIST");
+    private final String URL_TEMPLATE = "https://logo.clearbit.com/%s.com?size=700";
+    private final List<String> companies = fileLinesReader.readAllLines("src/main/resources/companies.txt");
     private final String DEFAULT_LOGO = "src/main/resources/nordea-default.jpg";
 
     private Formatter formatter;
